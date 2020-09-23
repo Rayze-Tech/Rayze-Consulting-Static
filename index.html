@@ -104,8 +104,9 @@
                             <a href="index.html" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a href="about.html" class="nav-link">About<i class="fas fa-angle-down ml-1"></i></a>
+                            <a href="#about" class="nav-link">About<i class="fas fa-angle-down ml-1"></i></a>
                             <ul class="dropdown-menu">
+                                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
                                 <li class="nav-item"><a href="team.html" class="nav-link">Meet our team</a></li>
                             </ul>
                         </li>
@@ -144,7 +145,6 @@
             </nav>
         </header>
         <!-- ***** Header End ***** -->
-
         <!-- ***** Welcome Area Start ***** -->
         <section id="home" class="section welcome-area bg-overlay overflow-hidden d-flex align-items-center">
             <div class="container">
@@ -176,9 +176,8 @@
             </div>
         </section>
         <!-- ***** Welcome Area End ***** -->
-
-          <!-- ***** Content Area Start ***** -->
-          <section id="about" class="section content-area dark-bg ptb_50">
+        <!-- ***** Content Area Start ***** -->
+        <section id="about" class="section content-area dark-bg ptb_50">
             <div class="container">
                 <div class="row justify-content-between">
                     <div class="col-12 col-lg-6">
@@ -205,10 +204,11 @@
                                         <span class="color-1"><i class="fas fa-angle-double-right"></i></span>
                                     </div>
                                     <div class="content-text media-body">
-                                        <span class="text-white"><b>We cater to your needs</b><br>Rayze Consulting customizes its services for its clients. Whether you
+                                        <span class="text-white">
+                                            <b>We cater to your needs</b><br>Rayze Consulting customizes its services for its clients. Whether you
                                             need a simple consultation or a whole new marketing strategy
                                             Rayze has a solution for you!
-                                            </span>
+                                        </span>
                                     </div>
                                 </li>
                             </ul>
@@ -225,7 +225,6 @@
             </div>
         </section>
         <!-- ***** Content Area End ***** -->
-
         <!-- ***** Content Area Start ***** -->
         <section class="section content-area dark-bg">
             <div class="container">
@@ -289,8 +288,6 @@
             </div>
         </section>
         <!-- ***** Content Area End ***** -->
-
-
         <!-- ***** Service Area End ***** -->
         <section id="service" class="section service-area dark-bg ptb_100">
             <div class="container">
@@ -355,7 +352,6 @@
             </div>
         </section>
         <!-- ***** Service Area End ***** -->
-
         <!-- ***** Review Area Start ***** -->
         <section id="review" class="section review-area bg-overlay">
             <div class="container">
@@ -432,7 +428,6 @@
             </div>
         </section>
         <!-- ***** Review Area End ***** -->
-
         <!--====== Contact Area Start ======-->
         <section id="contact" class="contact-area dark-bg ptb_100">
             <div class="container">
@@ -460,50 +455,52 @@
                                 <li class="contact-info color-1 bg-hover active hover-bottom dark-shadow text-center p-5 m-3">
                                     <span><i class="fas fa-mobile-alt fa-3x"></i></span>
                                     <a class="d-block my-2" href="#">
-                                        <h3 class="text-white">(551)258-1780</h3>
+                                        <h3 class="text-white">(551) 258-1780</h3>
                                     </a>
                                 </li>
                             </ul>
+                            <div class="text-center">
+                                <a href="contact.html" class="btn btn-bordered-white mt-4">Contact Us</a>
+                            </div>
                         </div>
                     </div>
                     <!--<div class="col-12 col-lg-6 pt-4 pt-lg-0">
 
-                        <div class="contact-box text-center">
+                    <div class="contact-box text-center">
 
-                            <form id="contact-form" method="POST" action="assets/php/mail.php">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="name" placeholder="Name" required="required">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="name" placeholder="Company Name" required="required">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" name="email" placeholder="Email" required="required">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="subject" placeholder="Phone" required="required">
-                                        </div>
+                        <form id="contact-form" method="POST" action="assets/php/mail.php">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="name" placeholder="Name" required="required">
                                     </div>
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <textarea class="form-control" name="message" placeholder="Message" required="required"></textarea>
-                                        </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="name" placeholder="Company Name" required="required">
                                     </div>
-                                    <div class="col-12">
-                                        <button type="submit" class="btn btn-bordered active btn-block mt-3"><span class="text-white pr-3"><i class="fas fa-paper-plane"></i></span>Send Message</button>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" name="email" placeholder="Email" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="subject" placeholder="Phone" required="required">
                                     </div>
                                 </div>
-                            </form>
-                            <p class="form-message"></p>
-                        </div>
-                    </div>-->
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="message" placeholder="Message" required="required"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-bordered active btn-block mt-3"><span class="text-white pr-3"><i class="fas fa-paper-plane"></i></span>Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                        <p class="form-message"></p>
+                    </div>
+                </div>-->
                 </div>
             </div>
         </section>
         <!--====== Contact Area End ======-->
-
         <!--====== Call To Action Area Start ======-->
         <section id="joinus" class="section cta-area bg-overlay ptb_100">
             <div class="container">
@@ -513,15 +510,14 @@
                         <div class="section-heading text-center m-0">
                             <h2 class="text-white">Want to join our team?</h2><br>
                             <!--<p class="text-white-50 d-none d-sm-block mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.</p>
-                            <p class="text-white-50 d-block d-sm-none mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati.</p>-->
-                            <a href="info@rayzeconsulting.com" class="btn btn-bordered-white mt-4">Send Us Your Resume</a>
+                        <p class="text-white-50 d-block d-sm-none mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati.</p>-->
+                            <a href="joinus.html" class="btn btn-bordered-white mt-4">Learn More</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <!--====== Call To Action Area End ======-->
-
         <!--====== Footer Area Start ======-->
         <footer class="section footer-area dark-bg">
             <!--INSET FOOTER TOP-->
@@ -545,7 +541,6 @@
             </div>
         </footer>
         <!--====== Footer Area End ======-->
-
         <!--====== Modal Search Area Start ======-->
         <div id="search" class="modal fade p-0">
             <div class="modal-dialog dialog-animated">
@@ -579,7 +574,6 @@
             </div>
         </div>
         <!--====== Modal Search Area End ======-->
-
         <!--====== Modal Responsive Menu Area Start ======-->
         <div id="menu" class="modal fade p-0">
             <div class="modal-dialog dialog-animated">
