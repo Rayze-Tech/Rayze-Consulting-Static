@@ -219,6 +219,11 @@ img {
     width: 5rem;
 }
 
+.avatar-xl {
+    height: 7rem;
+    width: 7rem;
+}
+
 .text-underlined,
 .text-underlined:hover,
 .text-underlined:focus {
@@ -260,6 +265,10 @@ img {
 
 .radius-100 {
     border-radius: 100px !important;
+}
+
+.radius-200 {
+    border-radius: 200px !important;
 }
 
 .h-100vh {
