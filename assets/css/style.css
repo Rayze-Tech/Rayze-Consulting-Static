@@ -167,10 +167,10 @@ ul {
     padding: 0;
 }
 
-ol li,
-ul li {
-    list-style: none;
-}
+    ol li,
+    ul li {
+        list-style: none;
+    }
 
 img {
     height: auto;
