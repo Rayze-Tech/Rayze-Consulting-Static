@@ -65,6 +65,12 @@
     transition: transform .50s, box-shadow .50s;
 }
 
+#submit:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px #522bbd !important;
+    transition: box-shadow .5s ease, transform .5s ease;
+}
+
 html {
     scroll-behavior: smooth;
   }
@@ -249,12 +255,12 @@ img {
 }
 
 .form-control {
-    font-size: 15px;
+    font-size: 15px !important;
     height: 60px;
     border: none;
     outline: none;
     padding-left: 20px;
-    border-radius: 8px;
+    border-radius: 8px !important;
     -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
