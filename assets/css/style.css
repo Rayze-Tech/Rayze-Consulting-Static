@@ -59,6 +59,16 @@
 /* ******************************
 :: 3.0 GLOBAL CSS
 ****************************** */
+#mainButton:hover::after {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 5px black;
+    transition: transform .50s, box-shadow .50s;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -1079,6 +1089,11 @@ header {
 
 .navbar-expand .navbar-nav ul .nav-item {
     display: block;
+}
+
+.navbar-expand .navbar-nav ul .nav-item :hover {
+    color: black;
+    opacity: 50%;
 }
 
 .navbar-expand .navbar-nav .nav-link {
