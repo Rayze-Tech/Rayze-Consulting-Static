@@ -59,6 +59,25 @@
 /* ******************************
 :: 3.0 GLOBAL CSS
 ****************************** */
+
+.visibledevice {
+    display: none;
+}
+
+.visibledesktop {
+    display: block;
+}
+
+@media (max-width : 620px) {
+    .visibledevice {
+        display: block;
+    }
+
+    .visibledesktop {
+        display: none;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
