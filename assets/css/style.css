@@ -258,12 +258,12 @@ img {
 }
 
 .form-control {
-    font-size: 15px;
+    font-size: 15px !important;
     height: 60px;
     border: none;
     outline: none;
     padding-left: 20px;
-    border-radius: 8px;
+    border-radius: 8px !important;
     -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
@@ -1098,6 +1098,11 @@ header {
 
 .navbar-expand .navbar-nav ul .nav-item {
     display: block;
+}
+
+.navbar-expand .navbar-nav ul .nav-item :hover {
+    color: black;
+    opacity: 50%;
 }
 
 .navbar-expand .navbar-nav .nav-link {
