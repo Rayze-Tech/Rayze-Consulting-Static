@@ -38,6 +38,7 @@
 :: 23.0 FOOTER AREA CSS
 :: 24.0 ERROR AREA CSS
 :: 25.0 RTL AREA CSS
+:: 26.0 CLIENT CSS
 ****************************** */
 
 /* ******************************
@@ -59,6 +60,25 @@
 /* ******************************
 :: 3.0 GLOBAL CSS
 ****************************** */
+
+.visibledevice {
+    display: none;
+}
+
+.visibledesktop {
+    display: block;
+}
+
+@media (max-width : 620px) {
+    .visibledevice {
+        display: block;
+    }
+
+    .visibledesktop {
+        display: none;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -239,12 +259,12 @@ img {
 }
 
 .form-control {
-    font-size: 15px;
+    font-size: 15px !important;
     height: 60px;
     border: none;
     outline: none;
     padding-left: 20px;
-    border-radius: 8px;
+    border-radius: 8px !important;
     -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
@@ -1079,6 +1099,11 @@ header {
 
 .navbar-expand .navbar-nav ul .nav-item {
     display: block;
+}
+
+.navbar-expand .navbar-nav ul .nav-item :hover {
+    color: black;
+    opacity: 50%;
 }
 
 .navbar-expand .navbar-nav .nav-link {
@@ -2973,3 +2998,50 @@ body.dark,
 .rtl .grad-hover::before {
     background: linear-gradient(135deg, #E0040B 0%, #fc5130 100%);
 }
+
+/* ******************************
+:: 26.0 CLIENT CSS
+****************************** */
+
+.clients {
+    padding-top: 20px;
+}
+
+    .clients .owl-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+        .clients .owl-item img {
+            width: 70%;
+            opacity: 0.5;
+            transition: 0.3s;
+            -webkit-filter: grayscale(100);
+            filter: grayscale(100);
+        }
+
+            .clients .owl-item img:hover {
+                -webkit-filter: none;
+                filter: none;
+                opacity: 1;
+            }
+
+    .clients .owl-nav, .clients .owl-dots {
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    .clients .owl-dot {
+        display: inline-block;
+        margin: 0 5px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #ddd !important;
+    }
+
+        .clients .owl-dot.active {
+            background-color: #ffc451 !important;
+        }
