@@ -1,19 +1,32 @@
-<?php
+<?PHP
+/*
+    Contact Form from HTML Form Guide
+    This program is free software published under the
+    terms of the GNU Lesser General Public License.
+    See this page for more info:
+    http://www.html-form-guide.com/contact-form/creating-a-contact-form.html
+*/
+require_once("./include/fgcontactform.php");
 
-if (isset($_POST['submit'])){
-    $name = $_POST['name'];
-    $mailFrom = $_POST['email'];
-    $subject = $_POST['subject'];
-    $requests = $_POST['message'];
+$formproc = new FGContactForm();
 
-    $mailTo = "steven@pinepcs.com";
-    $headers = "From: ".$mailFrom;
-    $txt = "You have received a build request from ".$name.".\n\n"."What the customer wants to use the pc for: ".$subject.".\n"."Additional Requests ".$requests;
 
-    error_reporting(E_ALL);
-    ini_set('display_errors', TRUE);
-    ini_set('display_startup_errors', TRUE);
-    
-    mail($mailTo, $txt, $headers);
-    header("Location: index.html?mailsent");
+//1. Add your email address here.
+//You can add more than one receipients.
+$formproc->AddRecipient('tests@html-form-guide.com'); //<<---Put your email address here
+
+
+//2. For better security. Get a random tring from this link: http://tinyurl.com/randstr
+// and put it here
+$formproc->SetFormRandomKey('CnRrspl1FyEylUj');
+
+
+if(isset($_POST['submitted']))
+{
+   if($formproc->ProcessForm())
+   {
+        $formproc->RedirectToURL("thank-you.php");
+   }
 }
+
+?>

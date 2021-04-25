@@ -497,7 +497,7 @@
                     <div class="reviewer-thumb mt-3">
                         <a href="https://www.trendhunter.com/trends/rayze"><img class="avatar-xl " src="assets/img/features/th.png" alt="Trend Hunter"></a>
                     </div>
-                   
+
                 </div>
                 <!-- Single Review -->
                 <div class="single-review p-5 dark-bg ptb_100">
@@ -572,85 +572,61 @@
         </div>
 
         <!--====== Contact Area Start ======-->
-        <section id="contact" class="contact-area dark-bg ptb_100">
-            <div class="container">
-                <div class="row justify-content-between align-items-center">
-                    <div class="col-12 col-lg-5">
-                        <!-- Section Heading -->
-                        <div class="section-heading text-center mb-3">
-                            <h2 class="text-white">Let's connect!</h2>
-                            <p class="text-white d-none d-sm-block mt-4">Reach out to us with questions, business inquiries, or just to say hi!</p>
-                        </div>
-                        <!-- Contact Us -->
-                        <div class="contact-us">
-                            <ul>
-                                <!-- Contact Info -->
-                                <li class="contact-info color-1 bg-hover active hover-bottom dark-shadow text-center p-5 m-3">
-                                    <span><i class="fas fa-mobile-alt fa-3x"></i></span>
-                                    <a class="d-block my-2" href="#">
-                                        <h3 class="text-white">(551) 258 -1780</h3>
-                                    </a>
-                                </li>
-                                <!-- Contact Info -->
-                                <li class="contact-info color-3 bg-hover active hover-bottom dark-shadow text-center p-5 m-3">
-                                    <span><i class="fas fa-envelope-open-text fa-3x"></i></span>
-                                    <a class="d-none d-sm-block my-2" href="#">
-                                        <h3 class="text-white">
-                                            info
-                                            @rayzeconsulting.com
-                                        </h3>
-                                    </a>
-                                    <a class="d-block d-sm-none my-2" href="#">
-                                        <h3 class="text-white">
-                                            info
-                                            @rayzeconsulting.com
-                                        </h3>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6 pt-4 pt-lg-0">
-                        <!-- Contact Box -->
-                        <div class="contact-box text-center">
-                            <!-- Contact Form -->
-                            <form action="contactform.php" method="post" role="form">
-                                <div class="row">
-                                    <div class="col-md-12 mb-3">
-                                        <div class="form-group">
-                                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                            <div class="validate"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 mb-3">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                                            <div class="validate"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 mb-3">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 4 chars of subject" />
-                                            <div class="validate"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                                            <div class="validate"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 text-center">
-                                        <button type="submit" name="submit" id="submit" class="btn btn-bordered active btn-block mt-3">Send Message</button>
-                                    </div>
-                                </div>
-                            </form>
-                            <p class="form-message"></p>
-                        </div>
-                    </div>
+        <!-- Form Code Start -->
+        <form id='contactus' action='<?php echo $formproc->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>
+            <fieldset>
+                <legend>Contact us</legend>
+
+                <input type='hidden' name='submitted' id='submitted' value='1' />
+                <input type='hidden' name='<?php echo $formproc->GetFormIDInputName(); ?>' value='<?php echo $formproc->GetFormIDInputValue(); ?>' />
+                <input type='text' class='spmhidip' name='<?php echo $formproc->GetSpamTrapInputName(); ?>' />
+
+                <div class='short_explanation'>* required fields</div>
+
+                <div><span class='error'><?php echo $formproc->GetErrorMessage(); ?></span></div>
+                <div class='container'>
+                    <label for='name'>Your Full Name*: </label><br />
+                    <input type='text' name='name' id='name' value='<?php echo $formproc->SafeDisplay(' name') ?>' maxlength="50" /><br />
+                    <span id='contactus_name_errorloc' class='error'></span>
                 </div>
-            </div>
-        </section>
+                <div class='container'>
+                    <label for='email'>Email Address*:</label><br />
+                    <input type='text' name='email' id='email' value='<?php echo $formproc->SafeDisplay(' email') ?>' maxlength="50" /><br />
+                    <span id='contactus_email_errorloc' class='error'></span>
+                </div>
+
+                <div class='container'>
+                    <label for='message'>Message:</label><br />
+                    <span id='contactus_message_errorloc' class='error'></span>
+                    <textarea rows="10" cols="50" name='message' id='message'><?php echo $formproc->SafeDisplay('message') ?></textarea>
+                </div>
+
+
+                <div class='container'>
+                    <input type='submit' name='Submit' value='Submit' />
+                </div>
+
+            </fieldset>
+        </form>
+        <!-- client-side Form Validations:
+    Uses the excellent form validation script from JavaScript-coder.com-->
+
+        <script type='text/javascript'>
+            // <![CDATA[
+
+            var frmvalidator = new Validator("contactus");
+            frmvalidator.EnableOnPageErrorDisplay();
+            frmvalidator.EnableMsgsTogether();
+            frmvalidator.addValidation("name", "req", "Please provide your name");
+
+            frmvalidator.addValidation("email", "req", "Please provide your email address");
+
+            frmvalidator.addValidation("email", "email", "Please provide a valid email address");
+
+            frmvalidator.addValidation("message", "maxlen=2048", "The message is too long!(more than 2KB!)");
+
+// ]]>
+        </script>
         <!--====== Contact Area End ======-->
         <!--====== Call To Action Area Start ======-->
         <section id="joinus" class="section cta-area bg-overlay ptb_100">
