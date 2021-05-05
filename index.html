@@ -1,4 +1,4 @@
-﻿<?PHP
+﻿
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -573,7 +573,42 @@
         </div>
 
         <!--====== Contact Area Start ======-->
-        <iframe src='/assets/php/contactus.php' frameborder='0' width='100%' height='600'></iframe>
+        <div class="container_f dark-bg">
+            <h1 class="text-white text-center align-items-center dark-bg ptb_100" style="margin:auto">
+                Contact Us
+            </h1>
+            <div class="feedback">
+                <form id="fcf-form-id" class="fcf-form-class" method="post" action="/includes/mailto.inc.php">
+
+                    <div class="fcf-form-group">
+                        <label for="Name" class="fcf-label" style="color:black">Your name</label>
+                        <div class="fcf-input-group">
+                            <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="fcf-form-group">
+                        <label for="Email" class="fcf-label" style="color:black">Your email address</label>
+                        <div class="fcf-input-group">
+                            <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="fcf-form-group">
+                        <label for="Message" class="fcf-label" style="color:black">Your message</label>
+                        <div class="fcf-input-group">
+                            <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="fcf-form-group">
+                        <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
         <!--====== Contact Area End ======-->
         <!--====== Call To Action Area Start ======-->
         <section id="joinus" class="section cta-area bg-overlay ptb_100">
@@ -584,7 +619,7 @@
                         <div class="section-heading text-center m-0">
                             <h2 class="text-white">Want to join our team?</h2><br>
                             <!--<p class="text-white-50 d-none d-sm-block mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.</p>
-                            <p class="text-white-50 d-block d-sm-none mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati.</p>-->
+                        <p class="text-white-50 d-block d-sm-none mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati.</p>-->
                             <a href="joinus.html" class="btn btn-bordered-white mt-4">Learn More</a>
                         </div>
                     </div>
