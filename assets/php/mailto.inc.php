@@ -59,7 +59,6 @@ echo "Error sending email.";
         'Reply-To: ' . $email . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
     @mail($email_to, $email_subject, $email_message, $headers);
-    header("Location: ../contact.html?status=success");
 exit();
 ?>
 

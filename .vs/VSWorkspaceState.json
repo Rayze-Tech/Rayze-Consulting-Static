@@ -4,13 +4,12 @@
     "\\assets",
     "\\assets\\css",
     "\\assets\\img",
-    "\\assets\\img\\clients",
-    "\\assets\\img\\features",
     "\\assets\\js",
     "\\assets\\js\\bootstrap",
     "\\assets\\js\\jquery",
-    "\\assets\\js\\plugins"
+    "\\assets\\js\\plugins",
+    "\\assets\\php"
   ],
-  "SelectedNode": "\\assets\\img\\clients\\client-1.webp",
+  "SelectedNode": "\\assets\\php\\mailto.inc.php",
   "PreviewInSolutionExplorer": false
 }
