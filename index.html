@@ -573,43 +573,50 @@
         </div>
 
         <!--====== Contact Area Start ======-->
-        <div class="container_f dark-bg">
-            <h1 class="text-white text-center align-items-center dark-bg ptb_100" style="margin:auto">
-                Contact Us
-            </h1>
-            <div class="feedback">
-                <form id="fcf-form-id" class="fcf-form-class" method="post" action="/includes/mailto.inc.php">
 
-                    <div class="fcf-form-group">
-                        <label for="Name" class="fcf-label" style="color:black">Your name</label>
-                        <div class="fcf-input-group">
-                            <input type="text" id="Name" name="Name" class="fcf-form-control" required>
-                        </div>
-                    </div>
-
-                    <div class="fcf-form-group">
-                        <label for="Email" class="fcf-label" style="color:black">Your email address</label>
-                        <div class="fcf-input-group">
-                            <input type="email" id="Email" name="Email" class="fcf-form-control" required>
-                        </div>
-                    </div>
-
-                    <div class="fcf-form-group">
-                        <label for="Message" class="fcf-label" style="color:black">Your message</label>
-                        <div class="fcf-input-group">
-                            <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
-                        </div>
-                    </div>
-
-                    <div class="fcf-form-group">
-                        <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
-                    </div>
-
-
-                </form>
-            </div>
-        </div>
         <!--====== Contact Area End ======-->
+        <section id="contact" class="contact-area ptb_100 dark-bg">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-12 col-lg-6 pt-4 pt-lg-0">
+                        <div class="section-heading text-center mb-3">
+                            <h2 class="text-white">Let's connect!</h2>
+                            <p class="d-none d-sm-block mt-4"></p>
+                            <p class="d-block d-sm-none mt-4"></p>
+                        </div>
+                        <!-- Contact Box -->
+                        <div class="contact-box text-center">
+                            <!-- Contact Form -->
+                            <form id="contact-form" method="POST" action="assets/php/mailto.inc.php">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <input id="Name" type="text" class="form-control" name="Name" placeholder="Name" required="required">
+                                        </div>
+                                        <div class="form-group">
+                                            <input id="compName" type="text" class="form-control" name="Name" placeholder="Company Name" required="required">
+                                        </div>
+                                        <div class="form-group">
+                                            <input id="Email" type="email" class="form-control" name="Email" placeholder="Email" required="required">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <textarea id="Message" class="form-control" name="Message" placeholder="Message" required="required"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-bordered active btn-block mt-3"><span class="text-white pr-3"><i class="fas fa-paper-plane"></i></span>Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <p class="form-message"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!--====== Call To Action Area Start ======-->
         <section id="joinus" class="section cta-area bg-overlay ptb_100">
             <div class="container">

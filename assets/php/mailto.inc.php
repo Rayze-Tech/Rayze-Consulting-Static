@@ -11,6 +11,7 @@ echo "Error sending email.";
 }
   if (
         !isset($_POST['Name']) ||
+        !isset($_POST['compName']) ||
         !isset($_POST['Email']) ||
         !isset($_POST['Message'])
     ) {
@@ -18,6 +19,7 @@ echo "Error sending email.";
     }
 
     $name = $_POST['Name']; // required
+    $compName = $_POST['compName']; // required
     $email = $_POST['Email']; // required
     $message = $_POST['Message']; // required
 
@@ -32,6 +34,10 @@ echo "Error sending email.";
 
     if (!preg_match($string_exp, $name)) {
         $error_message .= 'The Name you entered does not appear to be valid.<br>';
+    }
+
+    if (!preg_match($string_exp, $compName)) {
+        $error_message .= 'The Company Name you entered does not appear to be valid.<br>';
     }
 
     if (strlen($message) < 2) {
@@ -51,6 +57,7 @@ echo "Error sending email.";
     }
 
     $email_message .= "Name: " . clean_string($name) . "\n";
+    $email_message .= "Company Name: " . clean_string($compName) . "\n";
     $email_message .= "Email: " . clean_string($email) . "\n";
     $email_message .= "Message: " . clean_string($message) . "\n";
 
