@@ -1,4 +1,5 @@
 <?php
+echo "This form is running";
 if (isset($_POST['Email'])) {
 $email_to = "ryantmk518@gmail.com";
 $email_subject = "Test Message";
