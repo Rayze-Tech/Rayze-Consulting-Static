@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: rayzeconsulting.com
+Token: 72d5e96bf9ab01ae0a1945c80362ed7285bdd8c95a3f1abe01c151e31be38dbf
